@@ -1,0 +1,19 @@
+// Глобально задаём частовстречающийся стиль для текста
+.title-section {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.16;
+  color: $text-head;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  color: $text-head;
+}
+.text {
+  line-height: 1.71;
+  /* or 171% */
+  color: $text-primary;
+}

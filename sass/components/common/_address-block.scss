@@ -1,0 +1,71 @@
+/* Адресс */
+.address-blok-header {
+  margin-left: auto;
+
+  & .item {
+    display: flex;
+
+    &:hover .icon,
+    &:focus-within .icon {
+      fill: $accent;
+    }
+    &:hover .link {
+      color: $accent;
+    }
+  }
+  & .button-icon {
+    margin-right: 10px;
+    &.icon-mail {
+      width: 16px;
+      height: 11.2px;
+      fill: $text-primary;
+    }
+    &.icon-phone {
+      width: 10px;
+      height: 15px;
+      fill: $text-primary;
+    }
+  }
+
+  & .icon {
+    background-position: center;
+    background-size: contain;
+    height: 16px;
+    width: 16px;
+    @include transition(fill);
+  }
+}
+.site-header .address-list {
+  display: flex;
+}
+.address-list .item + .item {
+  margin-left: 30px;
+}
+.address-list .link {
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  // Для футера
+}
+.footer .address-blok {
+  display: flex;
+  flex-direction: column;
+}
+.footer .address-list {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 8px;
+
+  & .link {
+    margin-top: 9px;
+    line-height: 1.17;
+    letter-spacing: $letter-spacing-primary;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  & .map {
+    line-height: 1.17;
+    letter-spacing: $letter-spacing-primary;
+    color: $text-white;
+    font-style: normal;
+  }
+}

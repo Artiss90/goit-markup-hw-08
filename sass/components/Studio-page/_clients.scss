@@ -1,0 +1,68 @@
+/* <!-- Постоянные клиенты --> */
+
+.clients {
+  display: flex;
+  flex-direction: column;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  & .title-section {
+    align-self: center;
+    margin-bottom: 50px;
+  }
+  & .list {
+    display: flex;
+  }
+  & .item + .item {
+    margin-left: 30px;
+  }
+  & .item {
+    width: calc((100% - 150px) / 6);
+    border: 1px solid $icone-color;
+    border-radius: 4px;
+    fill: $icone-color;
+
+    @include transition(fill);
+    @include transition(border);
+
+    &:hover,
+    &:focus-within {
+      border-color: $accent;
+      fill: $accent;
+    }
+  }
+  & .button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 170px;
+    fill: inherit;
+  }
+  & .icon.klient {
+    &1 {
+      width: 44px;
+      height: 49px;
+    }
+    &2 {
+      width: 40px;
+      height: 52px;
+    }
+    &3 {
+      width: 41px;
+      height: 43px;
+    }
+    &4 {
+      width: 80px;
+      height: 42px;
+    }
+    &5 {
+      width: 59px;
+      height: 47px;
+    }
+    &6 {
+      width: 88px;
+      height: 45px;
+    }
+  }
+}

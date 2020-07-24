@@ -1,0 +1,28 @@
+$background-primary: #ffffff;
+$background-secondary: #f5f4fa;
+$background-dark: #2f303a;
+$text-primary: #757575;
+$text-head: #212121;
+$text-white: #ffffff;
+$accent: #2196f3;
+$line-color: #ececec;
+$icone-color: #afb1b8;
+$border-project: #eeeeee;
+$font-weight: 400;
+$font-size-primary: 14px;
+$line-height-primary: 1.19;
+$letter-spacing-primary: 0.03em;
+$function-of-time: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-duration: 250ms;
+$button-hover: #188ce8;
+
+/* Прижатость текста (на данный момент неприменялось)*/
+%text-left {
+  text-align: left;
+}
+%text-center {
+  text-align: center;
+}
+%text-right {
+  text-align: right;
+}

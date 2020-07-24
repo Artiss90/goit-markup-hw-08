@@ -1,0 +1,40 @@
+/* Страница 2 "Портфолио" */
+
+.main-portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+/* Фильтр */
+.head-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+  & .filter {
+    display: flex;
+    flex-direction: row;
+  }
+  & .item + .item {
+    margin-left: 8px;
+  }
+  & .radio {
+    padding: 6px 22px;
+    background: $background-secondary;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    /* identical to box height, or 162% */
+    color: $text-head;
+    border-radius: 4px;
+    border-color: transparent;
+    @include transition(background);
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+      background: $accent;
+      color: $text-white;
+      border-color: transparent;
+    }
+  }
+}

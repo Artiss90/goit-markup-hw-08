@@ -1,0 +1,28 @@
+// задаём основной стиль для кнопок
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-width: 200px;
+  /* min-height: 50px; */
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  /* identical to box height, or 187% */
+  letter-spacing: 0.06em;
+  background: $accent;
+  color: $text-white;
+  border-radius: 4px;
+  /* для тега button */
+  border: none;
+  outline: $button-hover;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover;
+  }
+}

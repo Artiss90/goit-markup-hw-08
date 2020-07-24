@@ -1,0 +1,108 @@
+/* Прописуем глобальные распостраненные свойства */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+*:hover,
+:focus,
+:focus-within {
+  transition: all $transition-duration $function-of-time;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $background-primary;
+  color: $text-primary;
+  font-family: 'Roboto', sans-serif;
+  font-weight: $font-weight;
+  font-size: $font-size-primary;
+  line-height: $line-height-primary;
+  letter-spacing: $letter-spacing-primary;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Обнуляем заглавления */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+/* обнуляем, убираем маркировку списка */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* обнуляем р */
+p {
+  margin: 0;
+}
+/* убираем стиль ссилок */
+a {
+  /* убираем подчёркивания */
+  text-decoration: none;
+  /* убираем курсив */
+  font-style: normal;
+  /* добавляем наследование */
+  color: inherit;
+  font-family: inherit;
+}
+
+/* Блок для position:relative */
+.position-relative {
+  position: relative;
+}
+
+.appearance {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+/* делаем невидимые заголовки */
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  // opacity: 0;
+  overflow: hidden;
+}
+/* основние стили елементов */
+.container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Оглавления страниц */
+.title {
+  color: $text-head;
+}
+/* Кнопка-Фон для иконок */
+.button-icon {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+// Белий цвет текста для тёмного фона
+.section .on-dark {
+  color: $text-white;
+}

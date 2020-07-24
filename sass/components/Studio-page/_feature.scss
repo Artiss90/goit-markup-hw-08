@@ -1,0 +1,33 @@
+/* Функции, Характерные черты (Feature) */
+
+.feature {
+  padding-top: 94px;
+
+  & .list {
+    display: flex;
+  }
+  & .item {
+    width: calc(100%);
+  }
+  & .item + .item {
+    margin-left: 30px;
+  }
+  & .icon {
+    height: 70px;
+    width: 70px;
+    /* background-position: center; */
+  }
+
+  & .button-icon {
+    height: 120px;
+    width: 100%;
+    background-color: $background-secondary;
+    border-radius: 4px;
+  }
+  & .title {
+    margin-top: 30px;
+  }
+  & .text {
+    margin-top: 10px;
+  }
+}

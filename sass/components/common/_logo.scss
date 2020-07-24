@@ -1,0 +1,21 @@
+/* Логотип сайта в хедере */
+
+.site-logo {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  color: $accent;
+
+  .site-nav & {
+    margin-top: 24px;
+    margin-bottom: 25px;
+  }
+}
+.logo-studio {
+  color: $text-head;
+  // для футера
+  .footer & {
+    color: $text-white;
+  }
+}

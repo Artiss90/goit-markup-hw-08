@@ -1,0 +1,29 @@
+// Переменные
+@import './utils/variables';
+@import './utils/mixin';
+// Глобальние свойства
+@import './base/glob';
+// Общие (повторяющиеся) компоненты
+@import './components/common/title-text';
+@import './components/common/_logo';
+@import './components/common/address-block';
+@import './components/common/_icon-social';
+@import './components/common/button';
+
+// Хедер
+@import './components/header/header-page';
+
+// Уникальная часть главной страницы
+@import './components/Studio-page/hero';
+@import './components/Studio-page/feature';
+@import './components/Studio-page/activity';
+@import './components/Studio-page/team';
+@import './components/Studio-page/clients';
+@import './components/Studio-page/modal-hero';
+
+// Уникальная часть страницы Портфолио
+@import './components/Portfolio-page/filters';
+@import './components/Portfolio-page/project';
+
+// Футер
+@import './components/footer/footer-page';
