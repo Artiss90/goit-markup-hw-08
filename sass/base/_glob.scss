@@ -88,12 +88,12 @@ a {
   padding-left: 15px;
   padding-right: 15px;
   width: 480px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $width-tablet) {
     display: flex;
-    width: 768px;
+    width: $width-tablet;
   }
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
+  @media screen and (min-width: $width-desktop) {
+    width: $width-desktop;
   }
 }
 

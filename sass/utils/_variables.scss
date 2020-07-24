@@ -15,7 +15,9 @@ $letter-spacing-primary: 0.03em;
 $function-of-time: cubic-bezier(0.4, 0, 0.2, 1);
 $transition-duration: 250ms;
 $button-hover: #188ce8;
-
+$width-mobile: 480px;
+$width-tablet: 768px;
+$width-desktop: 1200px;
 /* Прижатость текста (на данный момент неприменялось)*/
 %text-left {
   text-align: left;
