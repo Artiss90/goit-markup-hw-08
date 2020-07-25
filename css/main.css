@@ -561,6 +561,12 @@ a {
   padding-bottom: 94px;
 }
 
+@media screen and (max-width: 1199px) {
+  .activity {
+    display: none;
+  }
+}
+
 .activity .title-section {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
