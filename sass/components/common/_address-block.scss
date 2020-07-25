@@ -39,7 +39,9 @@
   display: flex;
 }
 .address-list .item + .item {
-  margin-left: 30px;
+  @media screen and (min-width: $width-desktop) {
+    margin-left: 30px;
+  }
 }
 .address-list .link {
   line-height: 1.14;
@@ -49,12 +51,18 @@
 .footer .address-blok {
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 1199px) {
+    align-items: center;
+  }
 }
 .footer .address-list {
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
-  margin-top: 8px;
+  margin-top: 20px;
+  text-align: center;
+  @media screen and (min-width: $width-desktop) {
+    align-items: flex-start;
+  }
 
   & .link {
     margin-top: 9px;
