@@ -3,27 +3,60 @@
 .clients {
   display: flex;
   flex-direction: column;
-  padding-top: 94px;
-  padding-bottom: 94px;
-
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: $width-desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   & .title-section {
     align-self: center;
     margin-bottom: 50px;
   }
   & .list {
     display: flex;
+    flex-wrap: wrap;
+    @media screen and (min-width: $width-desktop) {
+      flex-wrap: nowrap;
+    }
   }
   & .item + .item {
     margin-left: 30px;
+    margin-top: 30px;
+    @media screen and (max-width: 767px) {
+      &:nth-child(2n + 1) {
+        margin-left: 0;
+      }
+      &:nth-child(-n + 2) {
+        margin-top: 0;
+      }
+    }
+    @media screen and (min-width: $width-tablet) and (max-width: 1199px) {
+      &:nth-child(-n + 3) {
+        margin-top: 0;
+      }
+      &:nth-child(4n) {
+        margin-left: 0;
+      }
+    }
+    @media screen and (min-width: $width-desktop) {
+      margin-top: 0;
+    }
   }
   & .item {
-    width: calc((100% - 150px) / 6);
     border: 1px solid $icone-color;
     border-radius: 4px;
     fill: $icone-color;
-
     @include transition(fill);
     @include transition(border);
+    width: calc((100% - 30px) / 2);
+
+    @media screen and (min-width: $width-tablet) {
+      width: calc((100% - 30px * 2) / 3);
+    }
+    @media screen and (min-width: $width-desktop) {
+      width: calc((100% - 30px * 5) / 6);
+    }
 
     &:hover,
     &:focus-within {
@@ -36,7 +69,7 @@
     justify-content: center;
     align-items: center;
     height: 90px;
-    width: 170px;
+    // width: 170px;
     fill: inherit;
   }
   & .icon.klient {

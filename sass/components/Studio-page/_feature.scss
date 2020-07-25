@@ -2,9 +2,10 @@
 
 .feature {
   padding-top: 60px;
-
+  padding-bottom: 60px;
   @media screen and (min-width: $width-desktop) {
     padding-top: 94px;
+    padding-bottom: 0;
   }
 
   & .list {

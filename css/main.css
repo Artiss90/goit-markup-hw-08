@@ -454,11 +454,13 @@ a {
 /* Функции, Характерные черты (Feature) */
 .feature {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 1200px) {
   .feature {
     padding-top: 94px;
+    padding-bottom: 0;
   }
 }
 
@@ -739,8 +741,15 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients .title-section {
@@ -754,14 +763,47 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients .list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 .clients .item + .item {
   margin-left: 30px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .clients .item + .item:nth-child(2n + 1) {
+    margin-left: 0;
+  }
+  .clients .item + .item:nth-child(-n + 2) {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .clients .item + .item:nth-child(-n + 3) {
+    margin-top: 0;
+  }
+  .clients .item + .item:nth-child(4n) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients .item + .item {
+    margin-top: 0;
+  }
 }
 
 .clients .item {
-  width: calc((100% - 150px) / 6);
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
@@ -769,6 +811,19 @@ a {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: calc((100% - 30px) / 2);
+}
+
+@media screen and (min-width: 768px) {
+  .clients .item {
+    width: calc((100% - 30px * 2) / 3);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients .item {
+    width: calc((100% - 30px * 5) / 6);
+  }
 }
 
 .clients .item:hover, .clients .item:focus-within {
@@ -787,7 +842,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   height: 90px;
-  width: 170px;
   fill: inherit;
 }
 
