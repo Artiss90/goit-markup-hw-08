@@ -2,6 +2,10 @@
 .address-blok-header {
   margin-left: auto;
 
+  @media screen and (max-width: 767px) {
+    position: absolute;
+  }
+
   & .item {
     display: flex;
 
@@ -24,6 +28,9 @@
       width: 10px;
       height: 15px;
       fill: $text-primary;
+      & .icon {
+        width: 11px;
+      }
     }
   }
 
@@ -37,6 +44,10 @@
 }
 .site-header .address-list {
   display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $width-desktop) {
+    flex-direction: row;
+  }
 }
 .address-list .item + .item {
   @media screen and (min-width: $width-desktop) {

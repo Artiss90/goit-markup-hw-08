@@ -1,6 +1,8 @@
 /* Блок шапки */
 
 .site-header {
+  position: relative;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
@@ -14,6 +16,10 @@
 
 .site-nav {
   display: flex;
+
+  @media screen and (max-width: 767px) {
+    position: absolute;
+  }
 
   & > .list {
     display: flex;

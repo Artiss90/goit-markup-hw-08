@@ -165,6 +165,9 @@ a {
 
 /* Логотип сайта в хедере */
 .site-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -172,7 +175,7 @@ a {
   color: #2196f3;
 }
 
-.site-nav .site-logo {
+.site-header .site-logo {
   margin-top: 24px;
   margin-bottom: 25px;
 }
@@ -188,6 +191,12 @@ a {
 /* Адресс */
 .address-blok-header {
   margin-left: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .address-blok-header {
+    position: absolute;
+  }
 }
 
 .address-blok-header .item {
@@ -221,6 +230,10 @@ a {
   fill: #757575;
 }
 
+.address-blok-header .button-icon.icon-phone .icon {
+  width: 11px;
+}
+
 .address-blok-header .icon {
   background-position: center;
   background-size: contain;
@@ -234,6 +247,19 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .site-header .address-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -375,8 +401,32 @@ a {
   background-color: #188ce8;
 }
 
+.modal-nav {
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-nav {
+    display: none;
+  }
+}
+
+.modal-nav .icon-cross {
+  display: none;
+}
+
+.modal-nav.is-open .icon-cross {
+  display: block;
+}
+
 /* Блок шапки */
 .site-header {
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -396,6 +446,12 @@ a {
   display: -ms-flexbox;
   display: flex;
   /* Фишка "Мы тут" */
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav {
+    position: absolute;
+  }
 }
 
 .site-nav > .list {
