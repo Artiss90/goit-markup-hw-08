@@ -17,35 +17,50 @@
   <body>
     <!-- Шапка страницы -->
     <header class="site-header container">
-      <nav class="site-nav">
-        <a class="site-logo" href="./" lang="en"><span>Web </span><span class="logo-studio">Studio</span></a>
-        <ul class="list">
-          <li class="item"><a class="link" href="./index.html">Студия</a></li>
-          <li class="item"><a class="link current" href="./portfolio.html">Портфолио</a></li>
-          <li class="item"><a class="link" href="">Контакты</a></li>
-        </ul>
-      </nav>
-      <address class="address-blok-header">
-        <!-- добавляем aria-label <a href="" aria-label=""></a> -->
-        <ul class="address-list">
-          <li class="item">
-            <a class="button-icon icon-mail" href="mailto:info@devstudio.com" aria-label="иконка конверта">
-              <svg class="icon">
-                <use href="./images/sprite.svg#icon-icon-mail"></use>
-              </svg>
-            </a>
-            <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-          </li>
-          <li class="item">
-            <a class="button-icon icon-phone" href="tel:+380961111111" aria-label="иконка телефона">
-              <svg class="icon">
-                <use href="./images/sprite.svg#icon-icon-phone"></use>
-              </svg>
-            </a>
-            <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
-          </li>
-        </ul>
-      </address>
+      <a class="site-logo" href="./" lang="en"><span>Web </span><span class="logo-studio">Studio</span></a>
+      <button class="menu-button is-open" type="button" data-menu-button>
+        <svg
+          class="icon"
+          width="40px"
+          height="40px"
+          aria-expanded="false"
+          aria-controls="menu-container is-open"
+          aria-label="переключатель мобильного меню"
+        >
+          <use class="icon-menu" href="./images/sprite-modal.svg#icon-menu-40"></use>
+          <use class="icon-cross" href="./images/sprite-modal.svg#icon-close-40"></use>
+        </svg>
+      </button>
+      <div class="menu-container" id="menu-container" data-menu>
+        <nav class="site-nav">
+          <ul class="list">
+            <li class="item"><a class="link" href="./index.html">Студия</a></li>
+            <li class="item"><a class="link current" href="./portfolio.html">Портфолио</a></li>
+            <li class="item"><a class="link" href="">Контакты</a></li>
+          </ul>
+        </nav>
+        <address class="address-blok-header">
+          <!-- добавляем aria-label <a href="" aria-label=""></a> -->
+          <ul class="address-list">
+            <li class="item">
+              <a class="button-icon icon-mail" href="mailto:info@devstudio.com" aria-label="иконка конверта">
+                <svg class="icon">
+                  <use href="./images/sprite.svg#icon-icon-mail"></use>
+                </svg>
+              </a>
+              <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+            </li>
+            <li class="item">
+              <a class="button-icon icon-phone" href="tel:+380961111111" aria-label="иконка телефона">
+                <svg class="icon">
+                  <use href="./images/sprite.svg#icon-icon-phone"></use>
+                </svg>
+              </a>
+              <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
+          </ul>
+        </address>
+      </div>
     </header>
     <!-- уникальний контент -->
     <main class="main-portfolio">
@@ -267,5 +282,6 @@
       <!-- Исправление дизайнера закоментировал -->
       <!-- <div class="copyright container"><p>2020 | Developed by GoIT Students</p></div> -->
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

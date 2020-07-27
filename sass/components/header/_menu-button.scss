@@ -1,4 +1,4 @@
-.modal-nav {
+.menu-button {
   border: none;
   background-color: transparent;
   @media screen and (min-width: $width-tablet) {
@@ -9,5 +9,12 @@
   }
   &.is-open .icon-cross {
     display: block;
+  }
+  &.is-open .icon-menu {
+    display: none;
+  }
+  &:hover,
+  &:focus-within {
+    fill: $accent;
   }
 }

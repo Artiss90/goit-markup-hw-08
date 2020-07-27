@@ -1,10 +1,14 @@
 /* Блок шапки */
 
 .site-header {
-  position: relative;
+  position: fixed;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  //  стили для фиксированой позииции
+  background: #ffffff;
+  width: 100%;
+  z-index: 1;
 
   & .item:hover,
   & .item:focus-within {
@@ -17,23 +21,31 @@
 .site-nav {
   display: flex;
 
-  @media screen and (max-width: 767px) {
-    position: absolute;
-  }
-
   & > .list {
     display: flex;
-    margin-left: 85px;
-    /* margin-top: 32px;
-  margin-bottom: 32px; */
-    align-items: center;
+    flex-direction: column;
+
     font-weight: 500;
-    line-height: 1.14;
+    font-size: 18px;
     letter-spacing: 0.02em;
+    line-height: 1.67;
     color: $text-head;
+
+    @media screen and (min-width: $width-tablet) {
+      flex-direction: row;
+      align-items: center;
+      // margin-left: 85px;
+      font-size: $font-size-primary;
+      line-height: 1.14;
+    }
   }
   & .item + .item {
-    margin-left: 50px;
+    @media screen and (max-width: 767px) {
+      margin-top: 40px;
+    }
+    @media screen and (min-width: $width-tablet) {
+      margin-left: 50px;
+    }
   }
   /* Фишка "Мы тут" */
   & .link {
@@ -43,7 +55,16 @@
       position: relative;
       color: $accent;
     }
+    &.current.studio::after {
+      // поправка только для активной страницы Студио
+      @media screen and (max-width: 767px) {
+        transform: translateX(30%);
+      }
+    }
     &.current::after {
+      @media screen and (max-width: 767px) {
+        margin-top: 8px;
+      }
       content: '';
       display: block;
       margin-top: 28px;
