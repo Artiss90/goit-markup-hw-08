@@ -1092,6 +1092,13 @@ a {
   /* сама форма модалки */
 }
 
+@media screen and (max-width: 767px) {
+  .modal {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
 .modal .form-blank {
   padding: 40px;
   display: -webkit-box;
@@ -1228,6 +1235,16 @@ a {
 
 .modal .text-policy {
   line-height: 1.71;
+  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .modal .text-policy {
+    -moz-tab-size: 12px;
+      -o-tab-size: 12px;
+         tab-size: 12px;
+    line-height: 1.67;
+  }
 }
 
 .modal .icon-checkbox {
