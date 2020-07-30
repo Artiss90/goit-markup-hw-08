@@ -1391,8 +1391,27 @@ a {
           flex-direction: row;
 }
 
+@media screen and (max-width: 767px) {
+  .head-filter .filter {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .head-filter .item + .item {
   margin-left: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .head-filter .item + .item:nth-child(3n + 4) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .head-filter .item + .item:nth-child(n + 4) {
+    margin-top: 15px;
+  }
 }
 
 .head-filter .radio {
