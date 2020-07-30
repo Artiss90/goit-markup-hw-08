@@ -58,6 +58,9 @@
       flex-basis: calc((100% - 30px) / 2);
     }
   }
+  // & .portret {
+  //   object-fit: contain;
+  // }
   & .title.name {
     margin-top: 30px;
   }

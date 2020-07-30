@@ -2,11 +2,10 @@
 /* бек-дроп */
 .modal {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  // margin-left: auto;
+  // margin-right: auto;
   justify-content: center;
   align-items: center;
-  overflow-y: scroll;
 
   position: fixed;
   z-index: 5;
@@ -15,6 +14,7 @@
   right: 0;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
   //   opacity: 1;
   @include transition(all);
 
