@@ -8,7 +8,32 @@
   }
   & .item {
     display: flex;
-    width: calc((100% - 60px) / 3);
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      margin-left: 0;
+
+      & + .item {
+        margin-top: 30px;
+      }
+    }
+    @media screen and (min-width: $width-tablet) and (max-width: 1199px) {
+      width: calc((100% - 30px) / 2);
+      &:not(:nth-child(2n + 1)) {
+        margin-left: 30px;
+      }
+      &:not(:nth-child(-n + 2)) {
+        margin-top: 30px;
+      }
+    }
+    @media screen and (min-width: $width-desktop) {
+      width: calc((100% - 60px) / 3);
+      &:not(:nth-child(3n + 1)) {
+        margin-left: 30px;
+      }
+      &:not(:nth-child(-n + 3)) {
+        margin-top: 30px;
+      }
+    }
 
     &:hover .pro.on-dark,
     &:focus .pro.on-dark {
@@ -19,12 +44,6 @@
       box-sizing: border-box;
       box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
     }
-  }
-  & .item:not(:nth-child(3n + 1)) {
-    margin-left: 30px;
-  }
-  & .item:not(:nth-child(-n + 3)) {
-    margin-top: 30px;
   }
   & .pro.on-dark {
     display: flex;
@@ -60,5 +79,9 @@
     display: block;
     overflow: hidden;
     position: relative;
+  }
+  & .pro-img {
+    height: 294px;
+    object-fit: cover;
   }
 }
